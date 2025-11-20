@@ -1,16 +1,12 @@
-// arquivo unico contendo todas as classes de modelo do sistema
-// obs: comentarios sem acentos e sem letras maiusculas conforme solicitado
+// arquivo unico com as entidades do dominio
+package proj.app;
 
-package model;
-
-// classe que representa uma pessoa fisica no sistema
-// esse objeto guarda dados pessoais basicos
-public class PessoaFisica {
+// classe publica que representa pessoa fisica
+ class PessoaFisica {
     public String cpf;
     public String nome;
     public int idade;
 
-    // construtor recebe os dados da pessoa fisica
     public PessoaFisica(String cpf, String nome, int idade) {
         this.cpf = cpf;
         this.nome = nome;
@@ -18,8 +14,7 @@ public class PessoaFisica {
     }
 }
 
-// classe que representa o perfil do candidato
-// o perfil guarda informacoes textuais adicionais
+// classe perfil (package-private)
 class Perfil {
     public int id;
     public String dados;
@@ -29,8 +24,7 @@ class Perfil {
     }
 }
 
-// classe que representa o candidato completo
-// ele referencia a tabela pessoa fisica e o perfil
+// classe candidato (package-private)
 class Candidato {
     public int id;
     public String email;
@@ -46,8 +40,7 @@ class Candidato {
     }
 }
 
-// classe que representa uma habilidade do candidato
-// cada habilidade pertence a um perfil
+// classe habilidade (package-private)
 class Habilidade {
     public int id;
     public String descricao;
@@ -61,8 +54,7 @@ class Habilidade {
     }
 }
 
-// classe que representa um interesse do candidato
-// cada interesse pertence ao perfil
+// classe interesse (package-private)
 class Interesse {
     public int id;
     public String descricao;
@@ -74,8 +66,7 @@ class Interesse {
     }
 }
 
-// classe que representa a afiliacao do candidato
-// usada na etapa final do cadastro
+// classe afiliacao (package-private)
 class Afiliacao {
     public int id;
     public int idCandidato;
